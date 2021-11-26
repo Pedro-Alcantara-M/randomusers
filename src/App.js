@@ -1,24 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { useRoutes } from 'react-router-dom';
+import { StateProvider } from './context/state'
+import { initialState, reducer } from './context/reducer'
+import routes from './routes'
 
 function App() {
+  const routing = useRoutes(routes);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <StateProvider initialState={initialState} reducer={reducer}>
+      <div className="App" >
+        {routing}
+      </div>
+    </StateProvider >
   );
 }
 
