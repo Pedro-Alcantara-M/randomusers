@@ -3,7 +3,7 @@
 ## Descrição
 O projeto exibe uma lista de usuários e é possível filtrar usuários por gênero e nacionalidade, para o consumo de dados foi utilizada a API: https://randomuser.me.
 
-## Tecnologias uUsadas:
+## Tecnologias Usadas:
 - React.js
 - Material Ui
 - Axios
